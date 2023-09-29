@@ -10,12 +10,20 @@ body::-webkit-scrollbar {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3vh;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+.mobileBg {
+    height: 100vh;
+    object-fit: cover;
+}
 
+
+
+
+/* Hearts */
 .wrapper {
     /* z-index: 1000; */
     position: fixed;
@@ -196,3 +204,4 @@ h1 {
           -ms-transform-origin: 100% 100%;
               transform-origin :100% 100%;
   }
+  /*  */
