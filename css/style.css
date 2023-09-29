@@ -43,7 +43,7 @@ body {
 
 /*header section*/
 .hero_area {
-  height: calc(100vh - 30px);
+  height: 100vh;
   background: -webkit-gradient(linear, left top, right top, color-stop(55%, #1a2e35), color-stop(55%, #1cbbb4));
   background: linear-gradient(to right, #1a2e35 55%, #1cbbb4 55%);
   display: -webkit-box;
@@ -54,6 +54,14 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .sub_page .hero_area {
