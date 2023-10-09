@@ -54,15 +54,61 @@
       </div>
     </div>
     <!-- MOBILE -->
-    <div class="mobile d-block d-lg-none">
-      <div class="bg-image">
-        <img src="./assets/strand2.jpg" class="w-100 mobileBg" alt="Strand" />
-        <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6)">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <h1 class="text-white text-center mb-0">Emma & Wouter fun day!!!</h1>
+    <div class="mobile scroller d-block d-lg-none">
+      <section id="section01">
+        <div class="bg-image">
+          <img src="./assets/strand2.jpg" class="w-100 mobileBg" alt="Strand" />
+          <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6)">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <h1 class="text-white text-center mb-0">Emma & Wouter fun day!!!</h1>
+              <div class="scrollButtonDown">
+                <a href="#section02"><span></span>Scroll</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="section02">
+        <div class="timeline">
+          <div class="scrollButtonUp">
+            <a href="#section02"><span></span>Scroll</a>
+          </div>
+          <div>
+            <ul>
+              <li style="--accent-color: #ce28d4">
+                <div class="date">09:45</div>
+                <div class="title">Wakker worden!!!!</div>
+                <div class="descr">Lekker samen wakker worden :)</div>
+              </li>
+              <li style="--accent-color: #c91c25">
+                <div class="date">10:30</div>
+                <div class="title">Ontbijten</div>
+                <div class="descr">Samen ontbijten met ... en ... en lekker genieten!</div>
+              </li>
+              <li style="--accent-color: #c91c25">
+                <div class="date">11:30</div>
+                <div class="title">Samen ... bakken!</div>
+                <div class="descr">Gezellig samen een ... bakken met een bakmix!</div>
+              </li>
+              <li style="--accent-color: #ce28d4">
+                <div class="date">14:00</div>
+                <div class="title">Lunchen bij ...</div>
+                <div class="descr">We gaan lekker samen lunchen bij .... Je kan er o.a. ... of ... nemen. Er is sowieso iets lekkers :)</div>
+              </li>
+              <li style="--accent-color: #ce28d4">
+                <div class="date">16:30</div>
+                <div class="title">Bioscoop!</div>
+                <div class="descr">We gaan naar Pathé om ... te kijken! Snacks niet inbegrepen ;)</div>
+              </li>
+              <li style="--accent-color: #c91c25">
+                <div class="date">20:00</div>
+                <div class="title">etuhhhhh</div>
+                <div class="descr">We gaan heerlijk ... maken bij jou thuis!</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
     <div class="wrapper">
       <div class="heart x1"></div>
@@ -82,4 +128,6 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"
   ></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
 </html>
