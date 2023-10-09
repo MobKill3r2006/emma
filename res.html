@@ -1,0 +1,10 @@
+<body>
+  <h1 id="vw"></h1>
+  <h1 id="vh"></h1>
+  <script>
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    document.getElementById("vw").innerHTML = vw + "px";
+    document.getElementById("vh").innerHTML = vh + "px";
+  </script>
+</body>
