@@ -61,6 +61,8 @@
           <div class="mask" style="background-color: hsla(0, 0%, 0%, 0.6)">
             <div class="d-flex justify-content-center align-items-center h-100">
               <h1 class="text-white text-center mb-0">Emma & Wouter fun day!!!</h1>
+              <h2 id="vw"></h2>
+              <h2 id="vh"></h2>
               <div class="scrollButtonDown">
                 <a href="#section02"><span></span>Scroll</a>
               </div>
@@ -121,6 +123,12 @@
       <div class="altheart x8"></div>
       <div class="heart x9"></div>
     </div>
+    <script>
+      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+      document.getElementById("vw").innerHTML = vw + "px";
+      document.getElementById("vh").innerHTML = vh + "px";
+    </script>
   </body>
 
   <script
