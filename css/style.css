@@ -59,6 +59,10 @@ section {
   box-sizing: border-box;
 }
 
+#section02 {
+  overflow-y: scroll;
+}
+
 #section02 a {
   padding-top: 35px;
 }
@@ -161,15 +165,15 @@ section {
 }
 
 ul {
-  --col-gap: 2rem;
-  --row-gap: 2rem;
-  --line-w: 0.25rem;
+  --col-gap: 2.3dvh;
+  --row-gap: 2.3dvh;
+  --line-w: 0.25dvh;
   display: grid;
   grid-template-columns: var(--line-w) 1fr;
   grid-auto-columns: max-content;
   column-gap: var(--col-gap);
   list-style: none;
-  width: min(60rem, 90%);
+  width: min(60dvh, 90%);
   margin-inline: auto;
 }
 
@@ -201,7 +205,7 @@ ul li {
 
 /* date */
 ul li .date {
-  --dateH: 3rem;
+  --dateH: 3.5dvh;
   height: var(--dateH);
   margin-inline: calc(var(--inlineP) * -1);
 
@@ -209,7 +213,7 @@ ul li .date {
   background-color: var(--accent-color);
 
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.5dvh;
   font-weight: 700;
 
   display: grid;
@@ -320,6 +324,45 @@ ul li .descr::before {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
+@media (max-width: 40rem) {
+  ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  ul::before {
+    grid-column: 2;
+  }
+  ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  ul li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+  ul li .title,
+  ul li .descr {
+    padding-inline: unset;
+    text-align: center;
+  }
+  .timeline ul {
+    padding-top: 14dvh;
+  }
+}
 
 /* Hearts */
 .wrapper {
@@ -330,6 +373,7 @@ ul li .descr::before {
   min-height: 100%;
   overflow: hidden;
   text-align: center;
+  pointer-events: none;
 }
 
 .x1 {
