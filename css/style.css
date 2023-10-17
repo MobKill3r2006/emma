@@ -61,6 +61,11 @@ section {
   background-color: white;
   overflow-y: scroll;
 }
+#section03-desk {
+  position: absolute;
+  top: 200dvh;
+  overflow: hidden;
+}
 
 #section01 a,
 #section01-desk a {
@@ -85,22 +90,14 @@ section {
 
 #section02 {
   overflow-y: scroll;
-  /*  */
-  /* background: linear-gradient(270deg, #ca0ee8, #d73d2c);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  -o-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite; */
 }
 
-#section02 a,
-#section02-desk a {
+#section02 .scrollButtonUp a,
+#section02-desk .scrollButtonUp a {
   padding-top: 35px;
 }
-#section02 a span,
-#section02-desk a span {
+#section02 .scrollButtonUp a span,
+#section02-desk .scrollButtonUp a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -109,6 +106,49 @@ section {
   margin-left: -12px;
   border-left: 1px solid #000000;
   border-bottom: 1px solid #000000;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -webkit-animation: sdb02 2s infinite;
+  animation: sdb02 2s infinite;
+  box-sizing: border-box;
+}
+
+#section02 .scrollButtonDown a,
+#section02-desk .scrollButtonDown a {
+  padding-top: 60px;
+}
+
+#section02 .scrollButtonDown a span,
+#section02-desk .scrollButtonDown a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb01 2s infinite;
+  animation: sdb01 2s infinite;
+  box-sizing: border-box;
+}
+
+#section03 a,
+#section03-desk a {
+  padding-top: 35px;
+}
+#section03 a span,
+#section03-desk a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
   -webkit-animation: sdb02 2s infinite;
@@ -134,6 +174,11 @@ section {
   opacity: 0.5;
 }
 
+#section02 .scrollButtonDown a,
+#section02-desk .scrollButtonDown a {
+  color: #000000;
+}
+
 .scrollButtonUp a {
   position: absolute;
   top: 40px;
@@ -150,6 +195,11 @@ section {
 }
 .scrollButtonUp a:hover {
   opacity: 0.5;
+}
+
+#section03 .scrollButtonUp a,
+#section03-desk .scrollButtonUp a {
+  color: #fff;
 }
 
 @-webkit-keyframes sdb01 {
@@ -218,6 +268,7 @@ ul::before {
   grid-row: 1 / span 20;
   background: rgb(225, 225, 225);
   border-radius: calc(var(--line-w) / 2);
+  height: 85%;
 }
 
 /* columns*/
@@ -230,7 +281,7 @@ ul li:not(:last-child) {
 /* card */
 ul li {
   grid-column: 2;
-  --inlineP: 1.5rem;
+  --inlineP: 1.5dvh;
   margin-inline: var(--inlineP);
   grid-row: span 2;
   display: grid;
